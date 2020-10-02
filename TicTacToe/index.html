@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- using defer to load it after the body of the HTML -->
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- we want a board to play the tictactoe on so we create a board
+    We want to access in css and js so we give class and id -->
+    <div class="board" id="board">
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+    </div>
+
+    <!-- We want to have a winning screen show -->
+    <div class="winning-message" id="winning-message">
+        <div data-winning-message-text></div>
+        <button id="restartButton">Restart</button>
+    </div>
+
+</body>
+</html>
