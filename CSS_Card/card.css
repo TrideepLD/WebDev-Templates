@@ -84,3 +84,60 @@ doesnt select the element itself or elements before it */
 .card:not(:first-child) {
     margin-left: -130px;
 }
+
+.card-author {
+    position: relative;
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    align-items: center;
+    margin: 3rem 0 0;
+}
+
+/* We make sure its display block cause images are inline by default */
+.author-avatar img {
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    display: block;
+    overflow: hidden;
+    margin: 16px 10px;
+}
+
+.half-circle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 48px;
+    fill: none; /* We do this cause otherwise it's like a full-half circle and we just want a cresent */
+    stroke: #ff8a00;
+    stroke-width: 8;
+    stroke-linecap: round;
+}
+
+.author-name-prefix {
+    font-style: normal;
+    font-weight: 700;
+    color: #7a7a8c;
+}
+
+/* Applying css gradient to text */
+
+.card-header h2:hover {
+    background: linear-gradient(90deg,#ff8a00,#e52e71);
+    text-shadow: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Just FYI browser support for this is fairly limited.
+It uses alot of pseudo elements that your browser wont support
+Chrome will generally support this tho which is cool.
+
+I also need to add some media query
+It looks funky without it on desktop PC and much better at smaller resolutions 
+Also if it is killing you, you can change the size of the h2 header that has the text
+Right now the text highlights even if you are slighly right of the text */
