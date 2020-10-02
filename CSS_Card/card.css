@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #17141d;
+    color: white;
+    font-family: 'DM Mono', monospace;
+}
+
+.card-list {
+    /* By default puts things in a row(or a flex box) */
+    display: flex;
+    padding: 3rem;
+    overflow-x: scroll;
+}
+
+.card {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 350px;
+    width: 400px;
+    min-width: 250px;
+    padding: 1.5rem;
+    /* Overflow flows horizontally
+    One subtle but powerful way to address that is using shadows */
+    border-radius: 16px;
+    background: #17141d;
+    box-shadow: -1rem 0 3rem #000;
+
+    /* Helps make it the animation not so jerky. 
+    What happens here is that since there is not timing in the animation
+    So now we add the transition of .2s to the card class
+    so whenever a property value changes, 
+    it takes that time to change the old value to the new value */
+    transition: .2s;
+}
+
+/* 
+    Pseudo Elements we can style below
+    Scrollbar pseudo elements wont work on every browser 
+    like my firefox for example feelsbadman
+    It does work on my chrome which is a big+ 
+*/
+
+.card-list::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* The thing the user drags around */
+.card-list::-webkit-scrollbar-thumb{
+    background: #201c29;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(0,0,0,.25);
+}
+
+.card-list::-webkit-scrollbar-track {
+    background: linear-gradient(90deg,#201c29,#201c29 1px,#17141d 0,#17141d);
+}
+
+/* Now for the animation.
+Here is what happens:
+When the card is hovered over, the card moves up a few pixels
+Then the neighbouring cards are pushed aside a few pixels
+This helps us to create the fancy elements */
+
+/* Hover pseudo selector */
+.card:hover {
+    /* move it by about the root font size of 1(which is 15px aroudn thre) */
+    transform: translateY(-1rem); 
+}
+
+/* The tricky part is this
+We use the tilde to select all siblings after the hovered card.
+It's called the general sibling combinator
+doesnt select the element itself or elements before it */
+.card:hover~.card {
+    transform: translateX(130px);
+}
+
+/* Not does the opposite */
+.card:not(:first-child) {
+    margin-left: -130px;
+}
