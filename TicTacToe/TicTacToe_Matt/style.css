@@ -1,0 +1,24 @@
+
+.gameboard {
+    margin-top: 100px;
+    margin: auto;
+    width: 326px;
+    height: 326px;
+    /* border: 1px solid black;
+    width: 600px;
+    height: 600px; */
+  }
+  #board h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+  .cell{
+    width: 100px;
+    height: 100px;
+    float: left;
+    cursor: pointer;
+    border: solid;
+    font-size: 50px;
+  }
+  

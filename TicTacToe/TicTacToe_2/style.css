@@ -1,0 +1,30 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    /* make grid more like a grid using flexbox down below */
+    justify-content: space-between;
+    width: 610px;
+    height: 610px;
+    background-color: black;
+}
+
+/* We only want div with style of .grid
+Not limiting the overall functionality of div */
+
+.grid div {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    margin-bottom: 5px;
+}
+
+/* Import the images
+make sure they are of appropriate size */
+
+.player_1 {
+    background-image: url('cross.png');
+}
+
+.player_2 {
+    background-image: url('circle.png');
+}
