@@ -10,7 +10,7 @@ var whoIsPlaying = 'Player 1';
 
 // square clicked
 
-
+// winner
 const winningCombos = [ 
   [0, 1, 2],
   [3, 4, 5],
@@ -20,6 +20,15 @@ const winningCombos = [
   [2, 5, 8],
   [0, 4, 8],
   [2, 4, 6],
+]
+
+
+//Board
+let board = 
+[
+0, 0, 0,
+0, 0, 0,
+0, 0, 0
 ]
 
 // App State 
@@ -46,11 +55,11 @@ function switchTurn(){
   }
 }
 
-  function takeTurn(e) {
-    if (board[e.target.id]{
-      !== '0' return;
-    } 
-    board[e.target.id] = turn
-    console.log(board)
+  // function takeTurn(e) {
+  //   if (board[e.target.id]{
+  //     !== '0' return;
+  //   } 
+  //   board[e.target.id] = turn
+  //   console.log(board)
 
 
