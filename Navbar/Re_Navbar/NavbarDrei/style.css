@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #24252A;
+}
+
+img {
+    height: 50px;
+    width: 50px;
+}
+
+li, a, button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end; /* pushes to the right */
+    align-items: center;
+    padding: 30px 10%;
+}
+
+/* We set display flex to the header, and the nav is a child of it 
+ * Basically its header which has img;nav;button and default order is 1;2;3 respectively.
+ * So basically now we are just reordering to fix so the order is 3;1;_ accordingly
+ */
+nav {
+    order: 1; 
+}
+
+.logo {
+    cursor: pointer;
+    order: 3; /* Basically I want the logo to be on the right so I put it as the right most in order*/
+    margin-left: auto;
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+/* Remove this if you want the button to the left */
+.nav_links li :nth-child(1){
+    padding: 0px 20px 0 0;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: #0088a9;
+}
+
+/* That thing we discussed with the orders
+Now it's complete and looks like this: 3;1;2 
+It basically works but like this for me cause of margin left 
+but we can add smth to nav/links li's nth child to proper it up */
+.cta {
+    order: 2;
+}
+
+/* Added margin left */
+button {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1); /* Basically 0-1 is opacity, 1 being most opaque */
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin-left: 20px;
+}
+
+button:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+}
