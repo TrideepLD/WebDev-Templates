@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="LoaderBalls">
+        <div class="LoaderBalls__item"></div>
+        <div class="LoaderBalls__item"></div>
+        <div class="LoaderBalls__item"></div>
+    </div>
+
+    <!--background audio--> 
+    <!-- <style media="screen" type="text/css"> 
+        #backgroundaudio { 
+        display: block; 
+        position: fixed; 
+        bottom: -43px; 
+        left: 5px; 
+        -webkit-transition: all 1s ease-in-out; 
+        -moz-transition: all 1s ease-in-out; 
+        -ms-transition: all 1s ease-in-out; 
+        -o-transition: all 1s ease-in-out; 
+        transition: all 1s ease-in-out; 
+        } 
+        #backgroundaudio:hover { 
+        bottom: 0; 
+        -webkit-transition: all 1s ease-in-out; 
+        -moz-transition: all 1s ease-in-out; 
+        -ms-transition: all 1s ease-in-out; 
+        -o-transition: all 1s ease-in-out; 
+        transition: all 1s ease-in-out; 
+        } 
+        #backgroundaudio audio { 
+        background: #ffffff; 
+        padding: 5px; 
+        display: table-cell; 
+        vertical-align: middle; 
+        height: 43px; 
+        z-index: 9998; 
+        } 
+        #backgroundaudio i { 
+        font-size: 40px; 
+        display: block; 
+        background: #ffffff; 
+        padding: 5px; 
+        width: 50px; 
+        float: none; 
+        margin-bottom: -1px; 
+        z-index: 9999; 
+        } 
+    </style> 
+    <div id="backgroundaudio"> 
+        <i class="fa fa-volume-up"></i> 
+        <audio autoplay="" controls="" loop="" preload=""> 
+            <source src="audio/GenshinTheme.ogg" type="audio/ogg"></source> 
+            <source src="audio/GenshinTheme.mp3" type="audio/mpeg"></source> 
+            Your browser does not support the audio element. 
+        </audio> 
+    </div> -->
+  
+    <!-- <iframe src="silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+    <audio controls autoplay loop>  w
+        <source src="audio/GenshinTheme.ogg" type="audio/ogg">  
+        <source src="audio/GenshinTheme.mp3" type="audio/mpeg">  
+    </audio>   -->
+
+    <!-- <iframe src="audio/GenshinTheme.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+    </iframe> 
+    <audio autoplay loop  id="playAudio">
+        <source src="audio/GenshinTheme.mp3">
+    </audio>
+
+    <script>
+         var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+        if (!isChrome){
+            $('#iframeAudio').remove()
+        }
+        else {
+            $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background 
+        }
+    </script> -->
+    
+
+    <audio id="Test_Audio"
+           controls autoplay> 
+        <source src="audio/GenshinTheme.ogg" type="audio/ogg"> 
+        <source src="audio/GenshinTheme.mp3" type="audio/mpeg"> 
+    </audio> 
+
+    <button ondblclick="My_Audio()"> 
+        Return Autoplay Status 
+    </button> 
+
+    <script> 
+    function My_Audio() { 
+        var a =  
+            document.getElementById("Test_Audio").autoplay; 
+            document.getElementById("test").innerHTML = a; 
+    } 
+    </script> 
+
+</body>
+</html>
