@@ -1,3 +1,5 @@
 .vscode
 .metals
 **/CardMatchingGame/vMatt
+package-lock.json
+node_modules
