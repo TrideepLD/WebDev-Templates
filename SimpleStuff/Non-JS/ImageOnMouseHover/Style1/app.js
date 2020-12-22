@@ -15,8 +15,14 @@ var boxHovered, boxNumber, selector, targetedBox, adjustX, adjustY;
 			adjustX = $(this).find(".popup").outerWidth(true);//gets the width of the targeted popup
 			adjustY = $(this).find(".popup").outerHeight(true);//gets the height of the targeted popup
 			if(targetedBox == "#box1") {//example of moving popup relative to mouse
-				adjustX = $(this).find(".popup").outerWidth(true)-12;//creates a more unique value
-				adjustY = $(this).find(".popup").outerHeight(true)-12;
+				adjustY = $(this).find(".popup").outerHeight(true)-12;//creates a more unique value
+			}
+			if(targetedBox == "#box2") {//example of moving popup relative to mouse
+				adjustX = $(this).find(".popup").outerWidth(true);//creates a more unique value
+			}
+			if(targetedBox == "#box3") {//example of moving popup relative to mouse
+				adjustX = $(this).find(".popup").outerWidth(true)-125;//creates a more unique value
+				adjustY = $(this).find(".popup").outerHeight(true);
 			}
 			//event.pageY or evet.pageX = the mouse position relative to the top left of the targeted box
 			var my = event.pageY-$(this).offset().top-adjustY;//my = mouse y position with some adjustment relateive to top of box
