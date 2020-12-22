@@ -1,0 +1,70 @@
+#boxes {
+	width: 400px;
+	height: 400px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 100;
+}
+.box {
+	width: 198px;
+	height: 113px;
+	float: left;
+	background-color: #FC3;
+	position: relative;/*VERY IMPORTANT*/
+	text-align: center;
+	padding-top: 85px;
+	border: 1px solid #000;
+	cursor: pointer;
+}
+.popup {
+	position: absolute;/*VERY IMPORTANT*/
+	width: 100px;
+	height: 100px;
+	background-color: #0C9;
+	left: -600px;/*This value gets replaced in javascript so ANY number is OK*/
+	top: 0px;/*This value gets replaced in javascript so ANY number is OK*/
+}
+#popup1 {
+	background-color: #96F;
+	border-radius: 50px;
+	font-size: 3em;
+	text-align: center;
+	padding-top: 20px;
+	height: 80px;
+}
+#popup2 {
+	background-color: #399;
+	border-radius: 50px;
+	font-size: 3em;
+	text-align: center;
+	padding-top: 20px;
+	height: 80px;
+	width: 125px;
+}
+#popup3 {
+	background-color: #939;
+	font-size: 3em;
+	text-align: center;
+	padding-top: 20px;
+	height: 80px;
+}
+#popup4 {
+	background-color: #FF0;
+	font-size: 3em;
+	text-align: center;
+	padding-top: 20px;
+	height: 80px;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+}
+#popup4 div {
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	margin-left: -10px;
+}
