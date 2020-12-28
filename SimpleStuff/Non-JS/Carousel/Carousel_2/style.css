@@ -20,7 +20,7 @@ p {
 
 #slides {
     padding: 30px;
-    border: 3px solid #ccc;
+    /* border: 3px solid #ccc; */
     background: #ffffff;
     position: relative;
     z-index: 1;
@@ -99,18 +99,18 @@ p {
 }
 
 #controls {
-    margin: -180px 0 0 0;
-    width: 100%;
+    margin: -350px 0 0 81px;
+    width: 79.9%;
     height: 100px;
     z-index: 3;
     position: relative;
-    cursor: crosshair;
+    /* cursor: crosshair; */
 }
 #controls label {
    transition: opacity 0.2s ease-out;
    display: none;
-   width: 50px;
-   height: 50px;
+   width: 175px;
+   height: 400px;
    opacity: .4;
 }
 
@@ -125,11 +125,13 @@ p {
 #slide4:checked ~ #controls label:nth-child(5),
 #slide5:checked ~ #controls label:nth-child(6),
 #slide6:checked ~ #controls label:nth-child(1) {
-   background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
-   float:right;
+    background: #000000;
+   /* background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat; */
+   float: right;
    margin: -80px -50px 0 0;
    display: block;
    cursor: crosshair;
+
 }
 
 /* Left click/arrow */
@@ -139,10 +141,12 @@ p {
 #slide4:checked ~ #controls label:nth-last-child(4),
 #slide5:checked ~ #controls label:nth-last-child(3),
 #slide6:checked ~ #controls label:nth-last-child(2) {
-   background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
-   float:left;
+    background: #000000;
+   /* background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat; */
+   float: left;
    margin: -80px 0 0 -50px;
    display: block;
+   cursor: alias;
 }
 
 #bullets label {
