@@ -1,0 +1,16 @@
+/* .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200%;
+} */
+
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    color: white;
+    top: 50%;
+}
